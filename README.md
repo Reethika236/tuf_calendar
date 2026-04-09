@@ -7,14 +7,14 @@ A responsive, interactive wall calendar component built with React and Bootstrap
 ## 🖼️ Screenshot
 
 > _Add a screenshot here after running the project locally_
-> `![Wall Calendar Screenshot](./screenshot.png)`
+> `![Wall Calendar Screenshot](./Screenshot%202026-04-09%20at%203.51.43 PM.png)`
 
 ---
 
 ## 🔗 Live Demo
 
-> _Add your deployed link here (Vercel / Netlify)_
-> [https://your-demo-link.com](https://your-demo-link.com)
+
+> [https://69d655c6e0bcf70bf2ee33a4--unique-toffee-ebd5f1.netlify.app/](https://your-demo-link.com)
 
 ---
 
@@ -76,7 +76,7 @@ src/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/wall-calendar.git
+git clone https://github.com/Reethika236/tuf_calendar.git
 
 # 2. Move into the project folder
 cd wall-calendar
