@@ -1,0 +1,188 @@
+/* Layout */
+.wall-calendar-wrapper {
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  background: #f5f4f0;
+  padding: 1.5rem 1rem;
+}
+
+/* Hero panel */
+.hero-panel {
+  background: #1a1a2e;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.hero-body {
+  padding: 1rem 1.25rem;
+  flex: 1;
+  color: #fff;
+}
+.hero-year {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+.hero-month-name {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.hero-tagline {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-top: 6px;
+}
+
+/* Calendar card */
+.calendar-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* Month title */
+.calendar-month-title {
+  font-size: 16px;
+  color: #1a1a2e;
+}
+.nav-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+.day-header {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #888;
+  padding: 4px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Day cells */
+.calendar-day {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.12s ease, transform 0.08s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-day.empty {
+  cursor: default;
+}
+.calendar-day:not(.empty):hover {
+  transform: scale(1.12);
+  z-index: 1;
+}
+
+/* State colors */
+.day-normal         { color: #333; background: transparent; }
+.day-normal:hover   { background: #f0effe; }
+.day-weekend        { color: #7c6fe0; background: #f5f3ff; }
+.day-weekend:hover  { background: #ede9fe; }
+.day-today          { color: #1a1a2e; background: #fef3c7; font-weight: 600; }
+.today-dot {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+.day-in-range       { background: #ede9fe; color: #4c1d95; }
+.day-selected {
+  background: #5b21b6;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  z-index: 2;
+}
+.day-selected:hover { background: #4c1d95; }
+
+/* Range badge */
+.range-badge {
+  background: #f5f3ff;
+  border: 1px solid #ede9fe;
+}
+.range-text { font-size: 13px; color: #4c1d95; }
+
+/* Notes card */
+.notes-card {
+  border-radius: 16px !important;
+  background: #fff;
+}
+.notes-title        { color: #1a1a2e; }
+.notes-month-label  { font-size: 12px; }
+.notes-label        { font-size: 13px; color: #444; }
+.notes-textarea {
+  font-size: 13px;
+  resize: none;
+  border-radius: 10px;
+  border-color: #e5e7eb;
+}
+.notes-textarea:focus {
+  box-shadow: 0 0 0 3px #ede9fe;
+  border-color: #7c3aed;
+}
+.saved-label {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Range summary bar */
+.summary-bar {
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.summary-bar .clear-btn {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.summary-bar .clear-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
